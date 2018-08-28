@@ -1,0 +1,185 @@
+.container {
+    height: 500px;
+    width: 600px;
+    position: absolute;
+    background: grey;
+    display: flex;
+    top:0px;
+    left:0px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.box1 {
+    height: 45px;
+    width: 70px;
+    position: relative;
+    background: rgb(212, 18, 115);
+    align-content: center;
+    font-size:10px;
+    justify-content: center;
+    flex-direction: row;
+    float: left;
+    flex-wrap: inherit;
+    margin: 5px;
+}
+.box {
+    height: 45px;
+    width:45px;
+    position: relative;
+    background: orangered;
+    float: left;
+    justify-content: last baseline;
+    align-content: center;
+    font-size: 5px;
+    margin: 5px;
+}
+.two {
+    background: orange;
+}
+.three {
+    background: aqua;
+}
+.four{
+    background: purple;
+}
+.five {
+    background: greenyellow;
+}
+.six {
+    background: violet;
+}
+.b8 {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    float: right;
+    background: purple;
+    display: flex;
+    top: 55px;
+    left: 100px;
+    font-size: 5px;
+}
+.b9 {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    float: right;
+    font-size: 5px;
+    background: aqua;
+    display: flex;
+    top: 55px;
+    left: 150px;
+}
+.b10 {
+    height: 50px;
+    width: 95px;
+    position: absolute;
+    background: orangered;
+    top:105px;
+    font-size: 5px;
+    left: 100px;
+}
+.b11 {
+    height: 100px;
+    width: 195px;
+    position: absolute;
+    background: plum;
+    top: 55px;
+    left: 200px;
+    font-size: 5px;
+}
+.b12 {
+    height: 45px;
+    width: 100px;
+    position: absolute;
+    float: right;
+    font-size: 5px;
+    background: green;
+    display: flex;
+    top: 55px;
+    left: 400px;
+}
+.b13 {
+    height: 50px;
+    width: 45px;
+    position: absolute;
+    float: right;
+    background: aquamarine;
+    display: flex;
+    top: 105px;
+    font-size: 5px;
+    left: 400px;
+}
+.b14 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    float: right;
+    background: maroon;
+    display: flex;
+    top: 105px;
+    left: 450px;
+    font-size: 5px;
+}
+.b15     {
+    height: 100px;
+    width: 95px;
+    position: absolute;
+    background: aquamarine;
+    top:160px;
+    font-size: 5px;
+    left: 100px;
+}
+.b16 {
+    height: 100px;
+    width: 95px;
+    position: absolute;
+    background: greenyellow;
+    top:160px;
+    font-size: 5px;
+    left: 200px;
+}
+.b17 {
+    height: 45px;
+    width: 100px;
+    position: absolute;
+    float: right;
+    font-size: 5px;
+    background: green;
+    display: flex;
+    top: 160px;
+    left:300px;
+}
+.b18 {
+height: 50px;
+width: 100px;
+position: absolute;
+float: right;
+font-size: 5px;
+background: magenta;
+display: flex;
+top: 210px;
+left: 300px;
+}
+.b19 {
+    height: 50px;
+    width: 45px;
+    position: absolute;
+    float: right;
+    background: orange;
+    display: flex;
+    top: 160px;
+    font-size: 5px;
+    left: 405px;
+}
+.b20 {
+    height: 50px;
+    width: 45px;
+    position: absolute;
+    float: right;
+    background: greenyellow;
+    display: flex;
+    top: 160px;
+    left: 455px;
+    font-size: 5px;
+}

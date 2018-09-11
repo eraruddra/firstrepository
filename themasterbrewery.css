@@ -1,4 +1,9 @@
-
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(drinks.jpg);
+    background-size: cover;
+    background-repeat:repeat;
+}
 .container {
     width: 100%;
     height: 20px;
@@ -14,12 +19,14 @@
 .box {
     width: 150px;
     height: 40px;
-    border: 1px solid rgb(17, 17, 51);
+    border: 2px solid rgb(17, 17, 51);
     color: beige;
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
     float: left;
+    cursor: pointer;
+    position: relative;
 }
 .image {
     width: 100%;
@@ -29,8 +36,7 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    background-image: url(drinks.jpg);
-    background-size: cover;
+
 }
 #name {
     font-size: 50px;
@@ -38,6 +44,7 @@
     color: bisque;
 }
 #offers {
+    cursor: pointer;
     font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-left: 200px; 
@@ -47,6 +54,8 @@
      height: 400px;
      top: 700px;
      position: absolute;
+     opacity: 0.8;
+     background: #fff;
  }
  .mocktails {
      width: 50%;
@@ -58,6 +67,7 @@
      float: left;
      background-image: url(mmmm.jpg);
      background-size: cover;
+     opacity: 0.8;
  }
 .list1 {
     width: 50%;
@@ -69,25 +79,7 @@
     top: 0px;
     float: right;
     font-family: monospace;
-}
-.menu2 {
-    width: 100%;
-    height: 400px;
-    position: absolute;
-    top: 1100px;
-    left: 0;
-    display: flex;
-}
-.cocktails {
-    width: 50%;
-    height: 400px;
-    color: rgb(107, 97, 97);
-    font-size: 50px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    float: left;
-    position: relative;
-    background-image: url(real.jpg);
-    background-size: cover;
+    opacity: 0.8;
 }
 .list2 {
     width: 50%;
@@ -97,7 +89,31 @@
     font-family: monospace;
     color: rgb(25, 49, 77);
     left: 130px;
+    opacity: 0.8;
+    }
+.menu2 {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 1200px;
+    left: 0;
+    display: flex;
+    opacity: 0.8;
+    background: #fff;
 }
+.cocktails {
+    width: 50%;
+    height: 400px;
+    color: rgb(107, 97, 97);
+    font-size: 50px;
+    float: left;
+    position: relative;
+    background-image: url(real.jpg);
+    background-size: cover;
+    top: 10px;
+    opacity: 0.8;
+}
+
 #discription {
     font-size: 20px;
     color: grey;
@@ -116,7 +132,9 @@
     height: 150px;
     justify-content: left;
     align-items: baseline;
-    display: flex
+    display: flex;
+    color: #555;
+    
 
 }
 img {
@@ -128,5 +146,181 @@ img {
     left: 70%;
     position: relative;
 }
+.box .popdata {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
 
- 
+/* Popup arrow */
+.box .popdata::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.box .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+#offermenu {
+    visibility: hidden;
+    width: 300px;
+    height: 100px;
+    font-size: 18;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-left: -150px;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    z-index: 1;
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+}
+#offermenu.view {
+    visibility: visible;
+    animation: fadein 0.5s , fadeout 0.5s;
+}
+@keyframes fadein{
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+.tools {
+    width: 70px;
+    height: 20px;
+    font-size: 10px;
+    color: #fff;
+    float: right;
+    position: relative;
+    right: 200px;
+    top: 15px;
+
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+.cart {
+    visibility: hidden;
+    width: 500px;
+    height: 500px;
+    background: darkslategrey;
+    color: #FFF;
+    opacity: 0.9;
+    position: absolute;
+    display: flex;  
+    justify-content: flex-start;
+    align-items: center;
+}
+.array .row{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    padding:5px 0px;
+    box-shadow:0px 0px 10px #888;
+}
+.row div {
+    margin:5px;
+    padding:5px;
+    width:250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #444;
+    box-sizing: border-box;
+}
+#cart.view {
+    visibility: visible;
+    animation: fadein 1s, fadeout 1s;
+}
+#cartbtn {
+    float: right;
+    box-shadow: 5px #111;
+    display: flex;
+    padding: 5px;
+    left: 25px;
+    top: 10px;
+    position: relative;
+    cursor: pointer;
+}

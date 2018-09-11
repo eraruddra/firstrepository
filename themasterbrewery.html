@@ -3,28 +3,42 @@
         <title>TheMasterBrewery</title>
         <link rel="stylesheet" href="themasterbrewery.css">
     </head>
+    
+    
     <body>
         <div class="containerA"></div>
             <div class="taskbar">
-                <div class="box">ABOUT</div>
-                <div class="box">CONTACT</div>
-                <div class="tools"></div>
+                <div class="box" onclick=myFunction() >ABOUT
+                    <span class="popdata" id="popdata">Gallery <br>
+                                                       Owners <br> 
+                                                       Information
+                      </span>
+                </div>
+                <div class="box" onclick=myFunction()>CONTACT
+                            <span class="popdata" id="popdata">
+                                Mobile <br>
+                                E-mail <br>
+                                Other Media 
+                            </span>
+                </div>
+                <div class="tools"><input type="text" onkeyup="functionsearch(event)" placeholder="Search your drink!"></div>
+                <button id="cartbtn" onclick="cartmenu()">CART</button>
         </div>
         <div class="image">
             <div id="name">THE MASTER BREWERY<br>
-            <div id="offers"> Offers</div>
+            <div id="offers" onclick=function2()> Offers</div>
+            <div id="offermenu">WEDNESDAY OFFER! <br>
+                                1 Cocktail(any) + 1 Mocktail(any) <br>
+                                = 1 extra Vodka Shot(free)       
+            </div>
         </div>
         <div class="menu">
             <div class="mocktails">MOCKTAILS</div>
             <div class="mockatils">
-                <div class="list1">   Virgin Mary  
-                    <button id="addon">+</button><br>            
-                        Classic Mojito
-                     <button id="addon">+</button><br>
-                        Hurricane Mocktail
-                     <button id="addon">+</button><br>
-                        Bella Bellini
-                     <button id="addon">+</button><br></div>
+                <div class="list1" id="list1">
+
+
+                </div>
             </div>    
         </div>
         <div class="menu2">
@@ -33,22 +47,31 @@
                 </div>
                 <div class="list2">
                                 <div id="drinkname">Martini
-                                        <button id="addon">+</button><br> 
+                                        <button id="addon" onclick="screen()">+</button><br> 
                                 </div>
-                                <div id="discription">(Gin, Vermouth)</div>
+                                <div id="discription" >(Gin, Vermouth)</div>
                                 <div id="drinkname">Bloody Mary
-                                        <button id="addon">+</button><br> 
+                                        <button id="addon" onclick="screen()">+</button><br> 
                                 </div>
                                 <div id="discription">(vodka)</div>
                                 <div id="drinkname">Margarita
-                                        <button id="addon">+</button><br> 
+                                        <button id="addon" onclick="screen()">+</button><br> 
                                 </div>
-                                <div id="discription">(Tequila, Triple sec</div>
+                                <div id="discription">(Tequila, Triple sec)</div>
                                 <div id="drinkname">Gimlet
-                                        <button id="addon">+</button><br> 
+                                        <button id="addon" onclick="screen()">+</button><br> 
                                 </div>
                                 <div id="discription">(Gin)</div>
                 </div>
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                      <a href="#">Vodka</a>
+                      <a href="#">Spice</a>
+                      <a href="#">Rum</a>
+                      <a href="#">Straw</a>
+                    </div>
+                  </div>
             <div class="base">
                         <div class="address"><img src="logo.jpg" alt=""><br>    
 
@@ -56,12 +79,15 @@
                                 * TripAdvisor LLC is not a booking agent and does not charge any service fees to users of our site... (more)
                                 TripAdvisor LLC is not responsible for content on external web sites. Taxes, fees not included for deals content
                         </div>
-                        <div class="bla">EXPLORE <br>
-                                About Us <br>
-                                Help Centre</div>
-            </div>
-
+                        
+                         
         </div>
+        <div class="cart" id="cart">
+            <div>YOUR CART</div>
+                    <div class="array"></div>
+        </div>
+        </div>
+        <script src="themasterbrewery.js"></script>
         
     </body>
 </html> 

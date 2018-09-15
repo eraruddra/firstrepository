@@ -1,4 +1,4 @@
-var rollnumbers = [
+var drinks = [
     {
         name: "Ashima",
         stream: "Non-med"

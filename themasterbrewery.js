@@ -76,9 +76,37 @@ function screen() {
   function closeNav() {
     document.getElementById("myNav").style.width = "0%";
   }
-  var cart = [];
-  console.log(cart);
+  var cartpop = [];
+  console.log("cartpop");
   function cartmenu() {
-      document.getElementById("cart");
-      
+    //   document.getElementById("cart")
+    //   console.log("cartpop")
+    cart.style.display = "flex";
   }
+  function closeCart(){
+      cart.style.display = "none";
+  }
+  function generatecart (){
+      elem ="" ;
+        mocktails.forEach(function(v,i){
+                elem += `<div class="lm">`;
+                elem += `<div>${v.name}</div>`;
+                elem += `<div>${v.base}</div>`;
+                elem += `</div>`
+        });
+        document.getElementById("array").innerHTML=elem;
+    }
+    generatecart();
+
+    function generatecart2 (){
+        elem ="" ;
+          cocktails.forEach(function(v,i){
+                  elem += `<div class="lmo">`;
+                  elem += `<div>${v.name}</div>`;
+                  elem += `<div>${v.base}</div>`;
+                  elem += `</div>`
+          });
+          document.getElementById("array2").innerHTML=elem;
+      }
+      generatecart2();
+      var original_array = mocktails.slice();

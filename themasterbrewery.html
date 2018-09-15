@@ -24,7 +24,7 @@
                 <div class="tools"><input type="text" onkeyup="functionsearch(event)" placeholder="Search your drink!"></div>
                 <button id="cartbtn" onclick="cartmenu()">CART</button>
         </div>
-        <div class="image">
+        <div class="image" id="cart_box">
             <div id="name">THE MASTER BREWERY<br>
             <div id="offers" onclick=function2()> Offers</div>
             <div id="offermenu">WEDNESDAY OFFER! <br>
@@ -82,11 +82,20 @@
                         
                          
         </div>
-        <div class="cart" id="cart">
-            <div>YOUR CART</div>
-                    <div class="array"></div>
+        
         </div>
-        </div>
+    </div>
+            <div class="cart" id="cart">
+                <div>YOUR CART</div>
+            <h2 style="color:#fff;" onclick="closeCart()">X</h2>
+
+                        <div class="array" id="array"></div>
+                        <div class="array" id="array2"></div>
+                        <div class="box">
+                            <input type="text" onkeyup="firstfilter(event)">
+                        </div>
+                        <div class="result" id="fill"></div>
+                    </div>
         <script src="themasterbrewery.js"></script>
         
     </body>

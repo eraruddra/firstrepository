@@ -43,32 +43,56 @@ var cocktails = [
         base: "gin"
     },
 ]
+var alldrinks= [
+
+{
+    name:"Virgin Mary",
+    type: "mocktail"
+},
+
+{
+    name: "classic mojito",
+    type:"mocktail"
+},
+{
+    name:"hurricane mocktail",
+    type:"mocktail"
+},
+{
+    name:"bella belini",
+    type:"mocktail"
+},
+{
+    name:"martini",
+    type:"cocktail"
+},
+{
+    name:"bloody mary",
+    type:"cocktail"
+},
+{
+    name:"margarita",
+    type:"cocktail"
+},
+{
+    name:"gimlet",
+    type:"cocktail"
+}
+]
 var orirginal_array = cocktails.slice();
 
+
 function generateHTML() {
-elem = "";
-mocktails.forEach(function(v,i) {
-        elem += `<div class="new">`;
-        elem += `<div>${v,name}</div>`;
-        elem +=`<button id="addon${i}" onclick="screen()">+ ${v.name} with base ${v.base}</button><br>`; 
-        elem += `</div>`;
-});
-    list1.innerHTML = elem;
-}
-generateHTML();
-function generateHTML2() {
     elem = "";
-    cocktails.forEach(function(v,i) {
-            elem += `<div class="newone">`;
+    mocktails.forEach(function(v,i) {
+            elem += `<div class="new">`;
             elem += `<div>${v,name}</div>`;
             elem +=`<button id="addon${i}" onclick="screen()">+ ${v.name} with base ${v.base}</button><br>`; 
             elem += `</div>`;
     });
-        list2.innerHTML = elem;
+        list1.innerHTML = elem;
     }
     generateHTML();
-
-
 function screen() {
     document.getElementById("myNav").style.width = "100%";
   }
@@ -86,27 +110,22 @@ function screen() {
   function closeCart(){
       cart.style.display = "none";
   }
-  function generatecart (){
-      elem ="" ;
-        mocktails.forEach(function(v,i){
-                elem += `<div class="lm">`;
-                elem += `<div>${v.name}</div>`;
-                elem += `<div>${v.base}</div>`;
-                elem += `</div>`
-        });
-        document.getElementById("array").innerHTML=elem;
-    }
-    generatecart();
+  var orirginal_array = alldrinks.slice();
+function alldrink(){
+    elem="";
+    alldrinks.forEach(function(v,i){
+        elem +=  `<div ="finalcart">`;
+        elem +=  `<div>${v.name}</div>`;
+        elem +=  `<input type="number" id="quantity">`;
+        elem +=  `<div>${v.type}</div>`;
+        elem +=  `</div>`;
+    });
+    array.innerHTML = elem;
+}
+alldrink();
 
-    function generatecart2 (){
-        elem ="" ;
-          cocktails.forEach(function(v,i){
-                  elem += `<div class="lmo">`;
-                  elem += `<div>${v.name}</div>`;
-                  elem += `<div>${v.base}</div>`;
-                  elem += `</div>`
-          });
-          document.getElementById("array2").innerHTML=elem;
-      }
-      generatecart2();
-      var original_array = mocktails.slice();
+function added(){
+    elem="";
+    }
+)   
+}

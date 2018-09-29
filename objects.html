@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Objects in Javascript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        //this is repaced by whatever is being called at the moment
+
+        function Person(){
+            this.name;
+            this.age;
+            this.getFullInfo = function(){
+                return `Name is ${this.name} and age is ${this.age}`;
+            };
+        }
+
+        var student = new Person();
+        var teacher = new Person();
+        student.name = "Saatvik";
+        teacher.age = 28;
+        student.age = 20;
+        // fill.innerHTMl = elem;
+        // var username = fill.innerHTMl;
+        // console.log(student.name + " and age is " + student.age + " and teacher's age is "+ teacher.age);
+        console.log(student.getFullInfo());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

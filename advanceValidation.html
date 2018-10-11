@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Advance Validation using javascript</title>
+    <script>
+        function validateMe(box) {
+            if(box.value === "")
+            {
+                //niche input box me jo bi hoga, onkeyup se ye chalega
+                box.nextSibling.innerHTML = box.id + " can't be blank";
+            }else if(box.id === "username"){
+                //
+                checkUsername(box);
+            }else{
+                //next sibling as in agle  empty div me chala jayega
+                box.nextSibling.innerHTML = "Ok";
+            }
+        }
+
+        function checkUsername(box){
+            if(box.value.length > 5)
+                {
+                    box.nextSibling.innerHTML = box.id + " good length";
+                }else{
+                    box.nextSibling.innerHTML = box.id + " length can't be less than 5 character";
+                }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" onkeyup="validateMe(this)" id="username"><span></span> <br>
+    <input type="text" onkeyup="validateMe(this)"  id="email"><span></span> <br>
+    <input type="text" onkeyup="validateMe(this)"  id="address"><span></span> <br>
+    <input type="password" onkeyup="validateMe(this)"  id="password"><span></span> <br>
+</body>
+</html>

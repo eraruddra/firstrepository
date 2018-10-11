@@ -1,0 +1,57 @@
+<html>
+    <head><title>first</title></head>
+    
+    
+    <style>
+        .popupbox {
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.8;
+            background: #000;
+            color: white;
+            margin-top: 200px;
+            margin-left: 500px;
+        }
+        #close {
+            position: relative;
+            display: flex;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            height: 100px;
+            width: 30px;
+        }
+    </style>
+    
+    
+    
+    <body>
+        <div class="popupbox" id="popupbox"> 
+         
+            <h1 id="close" onclick="closewindow()">X</h1>
+            <div>the Pop-up box</div>
+        </div>
+        <button onclick="popup()">click here</button>
+    
+    
+    <script>
+               function popup(){
+                   popupbox.style.display = "flex";
+               }
+               function closewindow() {
+                   popupbox.style.display = "none";
+               }
+    </script>
+    
+    
+    
+    
+    
+    
+    </body>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>events in javascript</title>
+            <style>
+            .circle {
+                width: 20px;
+                height: 20px;
+                border-radius: 40%;
+                background: #f09;
+                border: #f90 dashed 2px;
+                animation: rotation 2s linear infinite;
+                position: absolute;
+            }
+            @keyframes rotation{
+                from{transform:rotate(0deg)}
+                to{transform:rotate(360deg)}
+            }
+            #container {
+                width: 500px;
+                height: 500px;
+                position: absolute;
+                background: #00f;
+                overflow: hidden;
+            }
+            </style>
+    </head>
+    <body>
+        <div id="container"></div>
+        
+            <script>
+                container.addEventListener('mousemove', function(event){
+                var top = event.clientY;
+                var left = event.clientX;
+                var elem =  `<div class='circle' style='top:${top}px; left:${left}px'></div>`;
+                container.innerHTML += elem;
+                });
+            </Script>  
+    </body>
+</html>

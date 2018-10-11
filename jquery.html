@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>jquery</title>
+    </head>
+    <body>
+        <input type="text" placeholder="Enter your name!" id="name">
+        <span></span><br>
+        <div><button onclick="getdata()">ENTER</button></div>
+        <script src="jquery.js"></script>
+        <script>
+        function getdata(){
+            var user = $("#name").val();
+            if( user == "")
+            {
+                $("#name").next("span").html("Please enter a name").fadeout(3000);
+        
+            }else{
+                $("#name").next("span").html("okay!").fadeOut(3000);
+            }
+        }
+        </script>
+    </body>
+</html>

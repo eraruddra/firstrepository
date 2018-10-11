@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>BAKERINA</title>
+        <link rel="stylesheet" href="NEWWEBSITE.CSS">
+    </head>
+
+    <body>
+        <!--adding the cart div-->
+        <div id="cartbox"> YOUR CART:
+                <div id="close" onclick="closecart()">X</div>
+                <div class="selected-item"></div>
+            </div>
+
+        <div class="parent" >
+                <header>
+                   <div class="menu">MENU</div>
+                   <div class="menu" >ABOUT</div>
+                   <div class="cart" onclick='opencart()'>CART</div>    
+                </header>
+                <div style="color:black" onclick="opencart()">i m here</div>
+                <div class="image">
+                  <div class="name">  BAKERINA </div>
+                    <!--the divs for the slider images-->
+                            <div class="slider fade">
+                                <div class="numbering">1/4</div>
+                                <img src="cupcake.jpg" style="width:100%">
+                                <div class="image-caption">CUPCAKES</div>
+                            </div>
+                            <div class="slider fade">
+                                <div class="numbering">2/4</div>
+                                <img src="cake.jpg" style="width:100%">
+                                <div class="image-caption">CAKES</div>
+                            </div>
+                            <div class="slider fade">
+                                <div ckass="numbering">3/4</div>
+                                <img src="cookies.jpg" style="width:100%">
+                                <div class="image-caption">COOKIES</div>
+                            </div>
+                            <div class="slider fade">
+                                    <div class="numbering">4/4</div>
+                                    <img src="cheesecake.jpg" style="width:100%">
+                                    <div class="image-caption">CHEESECAKES</div>
+                            </div>
+                    <!--adding previous and next buttons-->
+                            <a class="previous" onkeyup="sliding-p()">&#10094;</a>
+                            <a class="next" onkeyup="sliding-n()" style="right:0px">&#10095;</a>
+                  
+                </div>
+                   
+                </div>
+                  <!--menu items ka div-->
+                        
+                    
+                            
+                  <div class= "menu">
+                    <div class="cupcake">
+                                      Lemon Raspberry <br>
+                                      Chocolate Galanche <br>
+                                      Vanilla Bean <br>
+                                      Cookies & Cream <br>
+                                      Red Velvet      
+
+
+                                      
+                                      
+                    </div>
+
+        </div>
+         
+                    <!-- javascript file attachment-->
+                    <script src="newwebsite.js"></script>
+    </body>
+
+
+</html>

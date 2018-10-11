@@ -1,0 +1,24 @@
+  <ul>
+                    <li>CHINESE
+                        <UL>
+                            <li>Noodles</li>
+                            <li>Spring Rolls</li>
+                            <li>Momos</li>
+                        </UL>
+                    </li>
+                    <li>MEXICAN</li>
+                    <li>ITALIAN
+                        <ul>
+                            <li>Pasta(Mix sauce)</li>
+                            <li>Pizza</li>
+                        </ul>
+                    </li>
+                    <li>INDIAN
+                        <ul>
+                            <li>Dosa</li>
+                            <li>Butter Chicken</li>
+                        </ul>
+                    </li>
+                    <li>MOCKTAILS</li>
+                    <li>COCKTAILS</li>
+                </ul>
